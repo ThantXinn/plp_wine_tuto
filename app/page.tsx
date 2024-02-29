@@ -54,7 +54,7 @@ const Home = async () => {
   );
 
   return (
-    <main className='max-w-screen-2xl mx-auto font-bodyFont h-screen relative !important'>
+    <main className='max-w-screen-2xl mx-auto font-bodyFont h-screen'>
       <Banner banner_imgs={banner_imgs} />
       <NewArrival
         newarrival_products={newarrival_products}

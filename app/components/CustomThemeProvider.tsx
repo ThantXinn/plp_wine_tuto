@@ -2,7 +2,7 @@
 "use client";
 import { ThemeProvider } from "next-themes";
 import { ReactNode, useEffect, useState } from "react";
-import Footer from "./Footer";
+import MobileNavBar from "./MobileNavBar";
 import Navbar from "./NavBar";
 interface Props {
   children: ReactNode;
@@ -17,7 +17,7 @@ const CustomThemeProvider = ({ children }: Props) => {
     return (
       <>
         <Navbar />
-        <Footer />
+        <MobileNavBar />
       </>
     );
   }
@@ -29,7 +29,7 @@ const CustomThemeProvider = ({ children }: Props) => {
       disableTransitionOnChange>
       <Navbar />
       {children}
-      <Footer />
+      <MobileNavBar />
     </ThemeProvider>
   );
 };

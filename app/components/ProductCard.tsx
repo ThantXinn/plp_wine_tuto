@@ -22,7 +22,7 @@ const ProductCard = ({ products, pageProps }: Props) => {
   const dispatch = useDispatch();
   return (
     <div
-      className={`flex relative p-2 mx-auto max-lg:mt-16 rounded-lg border-[1px] border-slate-200 backdrop-blur-md max-lg:items-center max-sm:w-48 items-center md:w-fit h-auto gap-2 group cursor-pointer mb-1 bg-white dark:bg-transparent dark:shadow-slate-500 hover:shadow-lg transition-all duration-150`}>
+      className={`flex relative p-2 mx-auto max-lg:mt-16 rounded-lg border-[1px] border-slate-200 backdrop-blur-md max-lg:items-center max-sm:w-60 items-center md:w-fit h-auto gap-2 group cursor-pointer mb-1 bg-white dark:bg-transparent dark:shadow-slate-500 hover:shadow-lg transition-all duration-150 max-sm:justify-center`}>
       <div className='w-full'>
         <div
           className={`relative flex w-full h-full max-xl:flex-col min-h-64 ${
@@ -32,20 +32,16 @@ const ProductCard = ({ products, pageProps }: Props) => {
           <div
             className={`${
               products.isNew ? "bg-Button-Color shadow-md" : "hidden"
-            } rounded-br-md rounded-tl-md absolute top-0 left-0 px-2 h-8 max-sm:h-6 flex items-center  max-sm:z-10 text-white`}>
+            } rounded-br-md rounded-tl-md absolute top-0 -left-[1px] px-2 h-8 max-sm:h-6 flex items-center  max-sm:z-10 text-white`}>
             {products.isNew ? (
               <h1 className='max-lg:text-xs'>
                 New
                 <div
                   className={`bg-Accent-Color absolute  
-             -right-7 ${
-               pageProps !== undefined
-                 ? "max-sm:-right-[35px] max-sm:top-6"
-                 : "max-sm:-right-[135px]"
-             } px-2 ${
-                    products.isDiscount &&
-                    "h-6 w-auto top-8 max-sm:top-0 rounded-bl-md rounded-tr-md"
-                  } flex items-center justify-center shadow-md max-sm:z-10 text-white`}>
+             -right-7 max-sm:-right-[35px] max-sm:top-6 px-2 ${
+               products.isDiscount &&
+               "h-6 w-auto top-8 max-sm:top-0 rounded-bl-md rounded-tr-md"
+             } flex items-center justify-center shadow-md max-sm:z-10 text-white`}>
                   {products.isDiscount ? (
                     <h1 className='text-xs flex'>
                       {products.discountPercentage}% OFF
@@ -73,7 +69,7 @@ const ProductCard = ({ products, pageProps }: Props) => {
             {products.image.map((images: any, index: number) => (
               <div
                 key={index}
-                className='lg:w-72 h-80 w-60 max-sm:w-44 max-lg:h-auto '>
+                className='lg:w-72 h-80 w-60 max-sm:w-56 max-lg:h-auto '>
                 <Image
                   src={urlForImage(images)}
                   alt='product_image'

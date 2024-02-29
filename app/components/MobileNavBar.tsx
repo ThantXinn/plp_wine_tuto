@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { navLinks } from "../constants";
 import ThemeSwitch from "./ThemeSwitch";
 
-const Footer = () => {
+const MobileNavBar = () => {
   const pathname = usePathname();
   return (
     <footer>
@@ -45,4 +45,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default MobileNavBar;

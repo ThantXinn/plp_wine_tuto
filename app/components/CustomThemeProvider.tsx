@@ -11,7 +11,7 @@ const CustomThemeProvider = ({ children }: Props) => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
-  }, []);
+  }, [mounted]);
 
   if (!mounted) {
     return (
@@ -28,8 +28,8 @@ const CustomThemeProvider = ({ children }: Props) => {
       enableSystem
       disableTransitionOnChange>
       <Navbar />
-      <Footer />
       {children}
+      <Footer />
     </ThemeProvider>
   );
 };

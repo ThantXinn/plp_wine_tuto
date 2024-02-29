@@ -1,7 +1,9 @@
 /** @format */
 
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 import CustomThemeProvider from "./components/CustomThemeProvider";
+import Layout from "./components/Layout";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,8 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>
-        <CustomThemeProvider>{children}</CustomThemeProvider>
+      <body className='bg-Main dark:bg-Secondary-Color !important'>
+        <Layout>
+          <CustomThemeProvider>{children}</CustomThemeProvider>
+          <Toaster
+            position='bottom-right'
+            toastOptions={{
+              style: {
+                background: "#000",
+                color: "#fff",
+              },
+            }}
+          />
+        </Layout>
       </body>
     </html>
   );

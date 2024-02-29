@@ -28,22 +28,20 @@ const config: Config = {
         roboto: ['Roboto', 'sans-serif']
       },
       colors: {
-        "primary": "#ECEEFF",
-        "vitage": "#F0F0F0",
-        "coral-blue": "#579BB1",
-        "coral-red": "#C63D2F",
-        "slate-gray": "#6D6D6D",
-        "pale-blue": "#F5F6FF",
-        "white-400": "rgba(255, 255, 255, 0.80)"
+        "Navbar-Color": "#EAEAEA",
+        "Navbar-Dark-Color": "#1E293B",
+        "Button-Color": "#BF4147",
+        "AddtoCartTitle-Color":"#333333",
+        "Main": "#F9F7F6",
+        "Accent-Color": "#5F9EA0",
+        "Background-Color": "#E6E6E6",
+        "Secondary-Color": "#0E172A",
       },
       boxShadow: {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
       },
       screens: {
         "wide": "1440px"
-      },
-      backgroundImage: {
-        "hero-bgimage": "url('src/assets/images/paint-bg.png')"
       }
     },
   },

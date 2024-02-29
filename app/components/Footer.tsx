@@ -1,14 +1,16 @@
 /** @format */
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navLinks } from "../constants";
 import ThemeSwitch from "./ThemeSwitch";
 
 const Footer = () => {
+  const pathname = usePathname();
   return (
     <footer>
       <div
-        className={`hidden max-lg:flex gap-3 px-3 justify-between items-center absolute bottom-0 right-0 w-screen h-16 cursor-pointer bg-slate-700`}>
+        className={`hidden max-lg:flex gap-3 px-3 justify-between items-center fixed bottom-0 right-0 w-screen h-16 cursor-pointer bg-slate-700 z-20`}>
         {/*
           <div
             onClick={() => setOpen(!open)}
@@ -21,12 +23,20 @@ const Footer = () => {
         {navLinks.map((link, index) => (
           <div
             key={index}
-            className='flex justify-center items-center gap-4'>
-            <Link
-              href={link.href}
-              className='px-3 md:px-7 flex font-montserrat leading-normal text-slate-gray text-2xl'>
-              {link.icons}
-            </Link>
+            className='flex justify-center items-center gap-4 cursor-pointer'>
+            {pathname === link.href ? (
+              <Link
+                href={link.href}
+                className='px-3 md:px-7 flex font-montserrat leading-normal text-slate-gray text-2xl font-light text-Accent-Color'>
+                {link.icons}
+              </Link>
+            ) : (
+              <Link
+                href={link.href}
+                className='px-3 md:px-7 flex font-montserrat leading-normal text-slate-gray text-2xl font-light dark:text-Main'>
+                {link.icons}
+              </Link>
+            )}
           </div>
         ))}
         <ThemeSwitch />

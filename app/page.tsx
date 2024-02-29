@@ -6,6 +6,7 @@ import { ContentType } from "@/type/contentType";
 import { ProductType } from "@/type/productType";
 import { groq } from "next-sanity";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import HomeBanner from "./components/HomeBanner";
 import MostPopular from "./components/MostPopular";
 import NewArrival from "./components/NewArrival";
@@ -65,6 +66,7 @@ const Home = async () => {
         mostpopular_products={mostpopular_products}
         contents={mostPopularContents}
       />
+      <Footer />
     </main>
   );
 };

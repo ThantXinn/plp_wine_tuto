@@ -22,7 +22,7 @@ const ProductCard = ({ products, pageProps }: Props) => {
   const dispatch = useDispatch();
   return (
     <div
-      className={`flex relative p-2 mx-auto max-lg:mt-16 rounded-lg border-[1px] border-slate-200 backdrop-blur-md max-lg:items-center max-sm:w-60 items-center md:w-fit h-auto gap-2 group cursor-pointer mb-1 bg-white dark:bg-transparent dark:shadow-slate-500 hover:shadow-lg transition-all duration-150 max-sm:justify-center`}>
+      className={`flex relative p-2 mx-auto max-lg:mt-8 rounded-lg border-[1px] border-slate-200 backdrop-blur-md max-lg:items-center max-sm:w-60 items-center md:w-fit h-auto gap-2 group cursor-pointer mb-1 bg-white dark:bg-transparent dark:shadow-slate-500 hover:shadow-lg transition-all duration-150 max-sm:justify-center group`}>
       <div className='w-full'>
         <div
           className={`relative flex w-full h-full max-xl:flex-col min-h-64 ${

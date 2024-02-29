@@ -15,6 +15,8 @@ export default defineType({
             name: "description",
             type: "array",
             title: "Content Description",
+            description: "Content Description characters maximum 200.",
+            validation: (rule) => rule.max(200),
             of:[{type:"block"}]
         }),
     ]

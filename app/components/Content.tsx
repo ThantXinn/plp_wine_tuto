@@ -9,7 +9,7 @@ interface Props {
 }
 const Content = ({ contents, icons }: Props) => {
   return (
-    <div className='flex w-full h-52 justify-items-start'>
+    <div className='flex w-full min-h-52 justify-items-start'>
       {contents.map((item) => (
         <div
           key={item.title}

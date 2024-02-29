@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks } from "../constants";
+import Container from "./Contanier";
 import ThemeSwitch from "./ThemeSwitch";
 
 const MobileNavBar = () => {
   const pathname = usePathname();
   return (
-    <footer>
+    <Container>
       <div
         className={`hidden max-lg:flex gap-3 px-3 justify-between items-center fixed bottom-0 right-0 w-screen h-16 cursor-pointer bg-slate-700 z-20`}>
         {/*
@@ -41,7 +42,7 @@ const MobileNavBar = () => {
         ))}
         <ThemeSwitch />
       </div>
-    </footer>
+    </Container>
   );
 };
 

@@ -3,16 +3,13 @@
 import { resetCart } from "@/redux/plpWineSlice";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Container from "../components/Contanier";
 
 const SuccessPage = ({ searchParams }: any) => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    !searchParams.session_id ? redirect("/") : dispatch(resetCart());
-  }, []);
+
+  dispatch(resetCart());
   return (
     <Container>
       <motion.div

@@ -32,7 +32,7 @@ export const POST = async (request: NextRequest) => {
         },
         line_items: updatetoStripeItems,
         mode: "payment",
-        success_url: `${config.next_public_api_url}success?session_id={CHECKOUT_SESSION_ID}`,
+        success_url: `https://plp-wine-sainty-io-vercel.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${config.next_public_api_url}cancel`,
         metadata: {
             email,

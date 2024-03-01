@@ -26,8 +26,8 @@ const ThemeSwitch = () => {
           key={index}
           id='btn_dark_toggle'
           onClick={() => setTheme(item.text)}
-          className={`px-1 rounded-full ${
-            resolvedTheme === (item.text || "system") && "bg-blue-200"
+          className={`px-1 rounded-full hover:scale-90 ${
+            resolvedTheme === (item.text || "system") && "bg-Accent-Color"
           } duration-200`}>
           <Image
             priority
@@ -35,6 +35,7 @@ const ThemeSwitch = () => {
             alt={item.alt}
             width={24}
             height={24}
+            className='dark:invert'
           />
         </button>
       ))}
